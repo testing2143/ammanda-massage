@@ -22,7 +22,7 @@ export default function HomePage() {
         title="Welkom bij Amanda Massage"
         subtitle="Vergeet de drukte van alledag en gun uzelf een moment van ontspanning. Warme aandacht, rust en zorg in een toegankelijke praktijk in Zoetermeer."
         image="/images/hero-wellness.svg"
-        alt="Sfeervolle placeholderafbeelding van een warme wellnessruimte"
+        alt="Sfeervolle wellnessfoto voor Amanda Massage"
         ctaLabel="Afspraak maken"
         ctaHref={siteSettings.bookingUrl}
         highlights={heroHighlights}
@@ -54,8 +54,8 @@ export default function HomePage() {
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
             <div className="relative h-64 sm:h-72">
               <Image
-                src="/images/praktijk-ruimte.svg"
-                alt="Placeholderafbeelding van de praktijkruimte"
+                src="/images/praktijk-ruimte.jpg"
+                alt="Foto van de praktijkruimte van Amanda Massage"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -125,8 +125,8 @@ export default function HomePage() {
             <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
               <div className="relative min-h-[18rem]">
                 <Image
-                  src="/images/praktijk-detail.svg"
-                  alt="Placeholderafbeelding van wellnessdetails"
+                  src="/images/praktijk-detail.jpg"
+                  alt="Detailfoto van de praktijk van Amanda Massage"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 40vw"

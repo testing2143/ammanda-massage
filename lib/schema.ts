@@ -11,8 +11,8 @@ export function getLocalBusinessSchema() {
     description: siteSettings.description,
     image: [
       `${siteSettings.siteUrl}/images/hero-wellness.svg`,
-      `${siteSettings.siteUrl}/images/praktijk-ruimte.svg`,
-      `${siteSettings.siteUrl}/images/amanda-portrait.svg`
+      `${siteSettings.siteUrl}/images/praktijk-ruimte.jpg`,
+      `${siteSettings.siteUrl}/images/amanda-portrait.jpg`
     ],
     url: siteSettings.siteUrl,
     telephone: siteSettings.phoneIntl,

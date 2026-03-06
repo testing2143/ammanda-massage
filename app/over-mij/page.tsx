@@ -28,8 +28,8 @@ export default function OverMijPage() {
           <FadeIn className="card-surface overflow-hidden">
             <div className="relative min-h-[30rem]">
               <Image
-                src="/images/amanda-portrait.svg"
-                alt="Placeholderportret van Amanda"
+                src="/images/amanda-portrait.jpg"
+                alt="Portretfoto van Amanda"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"

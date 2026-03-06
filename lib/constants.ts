@@ -80,8 +80,8 @@ export const massageTypes = [
       "De klassieke (Zweedse) massage is gericht op ontspanning van het hele lichaam. Door middel van strijkingen, knedingen en drukbewegingen worden spieren losgemaakt en de bloedsomloop gestimuleerd.",
     suitableFor:
       "Geschikt voor wie behoefte heeft aan rust, herstel en het loslaten van vastzittende spanning in rug, nek en schouders.",
-    image: "/images/klassieke-massage.svg",
-    alt: "Sfeervolle placeholderafbeelding van een klassieke massage",
+    image: "/images/klassieke-massage.jpg",
+    alt: "Foto van de massageruimte voor een klassieke massage",
     icon: "hands",
     durations: ["30 min", "60 min"]
   },
@@ -94,8 +94,8 @@ export const massageTypes = [
       "Bij de Hot Stone Massage worden verwarmde basaltstenen op het lichaam geplaatst en gebruikt bij het masseren. De warmte van de stenen dringt diep door in de spieren, wat zorgt voor diepe ontspanning.",
     suitableFor:
       "Fijn voor wie stress ervaart, koude spieren heeft of op zoek is naar een weldadige massage die extra diep doorwerkt.",
-    image: "/images/hot-stone-massage.svg",
-    alt: "Sfeervolle placeholderafbeelding van een hot stone massage",
+    image: "/images/hot-stone-massage.jpg",
+    alt: "Foto van hot stones voor een hot stone massage",
     icon: "stone",
     durations: ["60 min", "90 min"]
   },
@@ -108,8 +108,8 @@ export const massageTypes = [
       "Speciaal ontwikkeld voor zwangere vrouwen. De massage verlicht veelvoorkomende klachten zoals rugpijn, zware benen en spanning. Veilig en comfortabel, aangepast aan iedere fase van de zwangerschap.",
     suitableFor:
       "Ideaal voor aanstaande moeders die verlichting zoeken bij lichamelijke belasting en bewust een rustmoment willen inplannen.",
-    image: "/images/zwangerschapsmassage.svg",
-    alt: "Sfeervolle placeholderafbeelding van een zwangerschapsmassage",
+    image: "/images/zwangerschapsmassage.jpg",
+    alt: "Foto van een behandeltafel voor zwangerschapsmassage",
     icon: "heart",
     durations: ["60 min"]
   }
@@ -137,12 +137,12 @@ export const practiceFeatures = [
 
 export const practiceGallery = [
   {
-    image: "/images/praktijk-ruimte.svg",
-    alt: "Placeholderafbeelding van een warme praktijkruimte"
+    image: "/images/praktijk-ruimte.jpg",
+    alt: "Foto van de praktijkruimte van Amanda Massage"
   },
   {
-    image: "/images/praktijk-detail.svg",
-    alt: "Placeholderafbeelding van wellnessdetails in de praktijk"
+    image: "/images/praktijk-detail.jpg",
+    alt: "Detailfoto van de praktijk van Amanda Massage"
   }
 ] as const;
 

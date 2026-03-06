@@ -61,8 +61,8 @@ export default function PraktijkPage() {
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
             <div className="relative min-h-[28rem]">
               <Image
-                src="/images/praktijk-ruimte.svg"
-                alt="Placeholderafbeelding van de praktijkruimte"
+                src="/images/praktijk-ruimte.jpg"
+                alt="Foto van de praktijkruimte van Amanda Massage"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 55vw"
