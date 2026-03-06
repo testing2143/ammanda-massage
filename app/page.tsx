@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { DecorativePhoto } from "@/components/DecorativePhoto";
 import { FadeIn } from "@/components/FadeIn";
 import { Hero } from "@/components/Hero";
 import { MassageCard } from "@/components/MassageCard";
@@ -52,17 +52,14 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
-            <div className="relative h-64 bg-mist sm:h-72">
-              <Image
-                src="/images/praktijk-ruimte.jpg"
-                alt="Foto van de praktijkruimte van Amanda Massage"
-                fill
-                unoptimized
-                quality={100}
-                className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
-            </div>
+            <DecorativePhoto
+              src="/images/praktijk-ruimte.jpg"
+              alt="Foto van de praktijkruimte van Amanda Massage"
+              preset="preview-landscape"
+              tone="sage"
+              className="h-72 sm:h-80"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
             <div className="p-8 sm:p-10">
               <div className="flex items-center gap-3 text-bark">
                 <SparkIcon className="h-5 w-5" />
@@ -110,6 +107,7 @@ export default function HomePage() {
                   alt={massage.alt}
                   icon={massage.icon}
                   href="/massages"
+                  photoPreset={massage.cardPreset}
                 />
               </FadeIn>
             ))}
@@ -125,17 +123,14 @@ export default function HomePage() {
 
           <FadeIn delay={0.1} className="card-surface overflow-hidden">
             <div className="grid gap-0 xl:grid-cols-[0.9fr_1.1fr]">
-              <div className="relative min-h-[18rem]">
-                <Image
-                  src="/images/praktijk-detail.jpg"
-                  alt="Detailfoto van de praktijk van Amanda Massage"
-                  fill
-                  unoptimized
-                  quality={100}
-                  className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                />
-              </div>
+              <DecorativePhoto
+                src="/images/praktijk-detail.jpg"
+                alt="Detailfoto van de praktijk van Amanda Massage"
+                preset="preview-portrait"
+                tone="sand"
+                className="min-h-[20rem] sm:min-h-[24rem]"
+                sizes="(max-width: 1280px) 100vw, 40vw"
+              />
               <div className="p-8 sm:p-10">
                 <span className="eyebrow">Praktijk in Zoetermeer</span>
                 <h3 className="mt-5 font-heading text-3xl text-ink sm:text-4xl">

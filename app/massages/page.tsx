@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { DecorativePhoto } from "@/components/DecorativePhoto";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
 import { massagePlaceholderNote, massageTypes, siteSettings } from "@/lib/constants";
@@ -30,22 +30,23 @@ export default function MassagesPage() {
         <div className="mt-10 space-y-8">
           {massageTypes.map((massage, index) => {
             const reverse = index % 2 === 1;
+            const photoHeight =
+              massage.sectionPreset === "section-landscape"
+                ? "min-h-[21rem] sm:min-h-[24rem]"
+                : "min-h-[22rem] sm:min-h-[25rem]";
 
             return (
               <FadeIn key={massage.slug}>
                 <section id={massage.slug} className="card-surface overflow-hidden">
                   <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
-                    <div className={`relative min-h-[18rem] bg-mist sm:min-h-[20rem] ${reverse ? "lg:order-2" : ""}`.trim()}>
-                      <Image
-                        src={massage.image}
-                        alt={massage.alt}
-                        fill
-                        unoptimized
-                        quality={100}
-                        className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
-                        sizes="(max-width: 1024px) 100vw, 45vw"
-                      />
-                    </div>
+                    <DecorativePhoto
+                      src={massage.image}
+                      alt={massage.alt}
+                      preset={massage.sectionPreset}
+                      tone={reverse ? "sand" : "sage"}
+                      className={`${photoHeight} ${reverse ? "lg:order-2" : ""}`.trim()}
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                    />
                     <div className={`p-8 sm:p-10 ${reverse ? "lg:order-1" : ""}`.trim()}>
                       <span className="eyebrow">{massage.name}</span>
                       <h2 className="mt-5 font-heading text-4xl leading-tight text-ink sm:text-5xl">

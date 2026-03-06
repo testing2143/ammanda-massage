@@ -1,3 +1,5 @@
+import type { DecorativePhotoPreset } from "@/components/DecorativePhoto";
+
 export const siteSettings = {
   name: "Amanda Massage",
   legalName: "Amanda Massage",
@@ -83,6 +85,8 @@ export const massageTypes = [
     image: "/images/klassieke-massage.jpg",
     alt: "Foto van de massageruimte voor een klassieke massage",
     icon: "hands",
+    cardPreset: "card-portrait" as DecorativePhotoPreset,
+    sectionPreset: "section-portrait" as DecorativePhotoPreset,
     durations: ["30 min", "60 min"]
   },
   {
@@ -97,6 +101,8 @@ export const massageTypes = [
     image: "/images/hot-stone-massage.jpg",
     alt: "Foto van hot stones voor een hot stone massage",
     icon: "stone",
+    cardPreset: "card-portrait" as DecorativePhotoPreset,
+    sectionPreset: "section-portrait" as DecorativePhotoPreset,
     durations: ["60 min", "90 min"]
   },
   {
@@ -111,6 +117,8 @@ export const massageTypes = [
     image: "/images/zwangerschapsmassage.jpg",
     alt: "Foto van een behandeltafel voor zwangerschapsmassage",
     icon: "heart",
+    cardPreset: "card-landscape" as DecorativePhotoPreset,
+    sectionPreset: "section-landscape" as DecorativePhotoPreset,
     durations: ["60 min"]
   }
 ] as const;
@@ -138,11 +146,13 @@ export const practiceFeatures = [
 export const practiceGallery = [
   {
     image: "/images/praktijk-ruimte.jpg",
-    alt: "Foto van de praktijkruimte van Amanda Massage"
+    alt: "Foto van de praktijkruimte van Amanda Massage",
+    preset: "gallery-landscape" as DecorativePhotoPreset
   },
   {
     image: "/images/praktijk-detail.jpg",
-    alt: "Detailfoto van de praktijk van Amanda Massage"
+    alt: "Detailfoto van de praktijk van Amanda Massage",
+    preset: "gallery-portrait" as DecorativePhotoPreset
   }
 ] as const;
 

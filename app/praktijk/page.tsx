@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import { DecorativePhoto } from "@/components/DecorativePhoto";
 import { FadeIn } from "@/components/FadeIn";
 import { GoogleMap } from "@/components/GoogleMap";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -59,17 +58,14 @@ export default function PraktijkPage() {
           </FadeIn>
 
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
-            <div className="relative min-h-[24rem] bg-mist sm:min-h-[28rem]">
-              <Image
-                src="/images/praktijk-ruimte.jpg"
-                alt="Foto van de praktijkruimte van Amanda Massage"
-                fill
-                unoptimized
-                quality={100}
-                className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
-                sizes="(max-width: 1024px) 100vw, 55vw"
-              />
-            </div>
+            <DecorativePhoto
+              src="/images/praktijk-ruimte.jpg"
+              alt="Foto van de praktijkruimte van Amanda Massage"
+              preset="section-landscape"
+              tone="sage"
+              className="min-h-[24rem] sm:min-h-[28rem]"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+            />
           </FadeIn>
         </div>
 
@@ -81,17 +77,14 @@ export default function PraktijkPage() {
           <div className="grid gap-6">
             {practiceGallery.map((item, index) => (
               <FadeIn key={item.image} delay={index * 0.08} className="card-surface overflow-hidden">
-                <div className="relative min-h-[14rem] bg-mist">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    unoptimized
-                    quality={100}
-                    className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
-                    sizes="(max-width: 1024px) 100vw, 35vw"
-                  />
-                </div>
+                <DecorativePhoto
+                  src={item.image}
+                  alt={item.alt}
+                  preset={item.preset}
+                  tone={index % 2 === 0 ? "sage" : "sand"}
+                  className={item.preset === "gallery-portrait" ? "min-h-[16rem] sm:min-h-[18rem]" : "min-h-[15rem] sm:min-h-[17rem]"}
+                  sizes="(max-width: 1280px) 100vw, 35vw"
+                />
               </FadeIn>
             ))}
           </div>
