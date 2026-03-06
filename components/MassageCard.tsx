@@ -28,12 +28,14 @@ export function MassageCard({
 
   return (
     <article className="card-surface group overflow-hidden">
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-mist">
         <Image
           src={image}
           alt={alt}
           fill
-          className="object-cover transition duration-500 group-hover:scale-[1.04]"
+          unoptimized
+          quality={100}
+          className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 transition duration-500 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
         <div className="absolute left-5 top-5 inline-flex rounded-full border border-white/70 bg-white/80 p-3 text-bark shadow-soft backdrop-blur">

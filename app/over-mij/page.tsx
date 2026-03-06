@@ -26,12 +26,14 @@ export default function OverMijPage() {
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
           <FadeIn className="card-surface overflow-hidden">
-            <div className="relative min-h-[30rem]">
+            <div className="relative min-h-[22rem] bg-mist sm:min-h-[30rem]">
               <Image
                 src="/images/amanda-portrait.jpg"
                 alt="Portretfoto van Amanda"
                 fill
-                className="object-cover"
+                unoptimized
+                quality={100}
+                className="object-contain object-top bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>

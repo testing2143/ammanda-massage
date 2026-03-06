@@ -59,19 +59,21 @@ export default function PraktijkPage() {
           </FadeIn>
 
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
-            <div className="relative min-h-[28rem]">
+            <div className="relative min-h-[24rem] bg-mist sm:min-h-[28rem]">
               <Image
                 src="/images/praktijk-ruimte.jpg"
                 alt="Foto van de praktijkruimte van Amanda Massage"
                 fill
-                className="object-cover"
+                unoptimized
+                quality={100}
+                className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
                 sizes="(max-width: 1024px) 100vw, 55vw"
               />
             </div>
           </FadeIn>
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="mt-8 grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
           <FadeIn>
             <GoogleMap />
           </FadeIn>
@@ -79,12 +81,14 @@ export default function PraktijkPage() {
           <div className="grid gap-6">
             {practiceGallery.map((item, index) => (
               <FadeIn key={item.image} delay={index * 0.08} className="card-surface overflow-hidden">
-                <div className="relative min-h-[14rem]">
+                <div className="relative min-h-[14rem] bg-mist">
                   <Image
                     src={item.image}
                     alt={item.alt}
                     fill
-                    className="object-cover"
+                    unoptimized
+                    quality={100}
+                    className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
                     sizes="(max-width: 1024px) 100vw, 35vw"
                   />
                 </div>

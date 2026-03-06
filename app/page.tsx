@@ -52,12 +52,14 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.08} className="card-surface overflow-hidden">
-            <div className="relative h-64 sm:h-72">
+            <div className="relative h-64 bg-mist sm:h-72">
               <Image
                 src="/images/praktijk-ruimte.jpg"
                 alt="Foto van de praktijkruimte van Amanda Massage"
                 fill
-                className="object-cover"
+                unoptimized
+                quality={100}
+                className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
@@ -122,13 +124,15 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.1} className="card-surface overflow-hidden">
-            <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
+            <div className="grid gap-0 xl:grid-cols-[0.9fr_1.1fr]">
               <div className="relative min-h-[18rem]">
                 <Image
                   src="/images/praktijk-detail.jpg"
                   alt="Detailfoto van de praktijk van Amanda Massage"
                   fill
-                  className="object-cover"
+                  unoptimized
+                  quality={100}
+                  className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4"
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>

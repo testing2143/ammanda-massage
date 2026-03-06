@@ -35,12 +35,14 @@ export default function MassagesPage() {
               <FadeIn key={massage.slug}>
                 <section id={massage.slug} className="card-surface overflow-hidden">
                   <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
-                    <div className={`relative min-h-[20rem] ${reverse ? "lg:order-2" : ""}`.trim()}>
+                    <div className={`relative min-h-[18rem] bg-mist sm:min-h-[20rem] ${reverse ? "lg:order-2" : ""}`.trim()}>
                       <Image
                         src={massage.image}
                         alt={massage.alt}
                         fill
-                        className="object-cover"
+                        unoptimized
+                        quality={100}
+                        className="object-contain bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,240,232,0.82))] p-4 sm:p-6"
                         sizes="(max-width: 1024px) 100vw, 45vw"
                       />
                     </div>
